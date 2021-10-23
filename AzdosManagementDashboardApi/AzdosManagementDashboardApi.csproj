@@ -2,11 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>bb4ad9b1-d012-4359-a93d-ec427abbd443</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VssFacade\VssFacade.csproj" />
   </ItemGroup>
 
 

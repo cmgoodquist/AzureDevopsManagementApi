@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzdosManagementDashboardApi", "AzdosManagementDashboardApi\AzdosManagementDashboardApi.csproj", "{DE7090A9-D433-4445-8648-5CA9E23AE417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{E3A5A86B-B565-441E-8A73-1A99EDDAD4D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{E3A5A86B-B565-441E-8A73-1A99EDDAD4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VssFacade", "VssFacade\VssFacade.csproj", "{B1DAC77B-7D8F-4BD2-A1DE-D3A65B206F85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{090CEDAD-C572-4A7E-8C96-7C388968BEBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VssFacadeTests", "VssFacadeTests\VssFacadeTests.csproj", "{8F4D77F8-AC60-49C6-943B-80A76FB6BC90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,21 @@ Global
 		{E3A5A86B-B565-441E-8A73-1A99EDDAD4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3A5A86B-B565-441E-8A73-1A99EDDAD4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3A5A86B-B565-441E-8A73-1A99EDDAD4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DAC77B-7D8F-4BD2-A1DE-D3A65B206F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DAC77B-7D8F-4BD2-A1DE-D3A65B206F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DAC77B-7D8F-4BD2-A1DE-D3A65B206F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DAC77B-7D8F-4BD2-A1DE-D3A65B206F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4D77F8-AC60-49C6-943B-80A76FB6BC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4D77F8-AC60-49C6-943B-80A76FB6BC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4D77F8-AC60-49C6-943B-80A76FB6BC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4D77F8-AC60-49C6-943B-80A76FB6BC90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3A5A86B-B565-441E-8A73-1A99EDDAD4D0} = {090CEDAD-C572-4A7E-8C96-7C388968BEBF}
+		{8F4D77F8-AC60-49C6-943B-80A76FB6BC90} = {090CEDAD-C572-4A7E-8C96-7C388968BEBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACA99F60-40B7-4D8C-9BB8-9E1FECAFA8CE}

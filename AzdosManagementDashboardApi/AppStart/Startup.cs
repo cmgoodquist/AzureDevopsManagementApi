@@ -1,10 +1,9 @@
-using AzdosManagementDashboardApi.AzdosManagementDashboard;
-using AzdosManagementDashboardApi.AzdosManagementDashboard.DrivenDependencies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using VssFacade;
 
 namespace AzdosManagementDashboardApi.AppStart
 {
@@ -24,7 +23,7 @@ namespace AzdosManagementDashboardApi.AppStart
             services.AddSwaggerGen();
             services.AddCors();
 
-            services.AddScoped<IAzdosManagementDashboardService, AzdosManagementDashboardService>();
+            services.RegisterVssFacadeServices(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
