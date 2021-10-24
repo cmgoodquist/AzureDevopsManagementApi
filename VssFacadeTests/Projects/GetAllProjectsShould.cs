@@ -19,7 +19,10 @@ namespace VssFacadeTests.Projects
         {
             //Arrange
             var expectedProjects = projectReferences.Select(source => new Project(source));
-            var stubConnection = new StubOrganizationConnection(projectReferences);
+            var stubConnection = new StubOrganizationConnection()
+            {
+                Projects = projectReferences
+            };
             var projectClient = new ProjectClient(stubConnection);
 
             //Act
