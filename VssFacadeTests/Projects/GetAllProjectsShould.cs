@@ -1,23 +1,23 @@
 using Microsoft.TeamFoundation.Core.WebApi;
 using Microsoft.VisualStudio.Services.WebApi;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using VssFacade.Clients.Project;
 using VssFacade.Clients.Project.Implementations;
-using VssFacadeTests.Projects.Helpers;
 using Xunit;
 
 namespace VssFacadeTests.Projects
 {
     public class GetAllProjectsShould
     {
-        [Theory]
-        [MemberData(nameof(GetAllProjectsTheoryData.TeamProjectReferences), MemberType = typeof(GetAllProjectsTheoryData))]
-        public async Task ReturnAllProjects(IPagedList<TeamProjectReference> projectReferences)
+        [Fact]
+        public async Task ReturnAllProjects()
         {
             //Arrange
+            var projectReferences = SetUpTestData();
             var expectedProjects = projectReferences.Select(source => new Project(source));
             var stubConnection = new StubOrganizationConnection()
             {
@@ -30,6 +30,22 @@ namespace VssFacadeTests.Projects
 
             //Assert
             Assert.Equal(expectedProjects, actualProjects, new ProjectEqualityComparer());
+        }
+
+        private IPagedList<TeamProjectReference> SetUpTestData()
+        {
+            var projects = new PagedList<TeamProjectReference>();
+            for (var i = 0; i < 3; i++)
+            {
+                projects.Add(new TeamProjectReference()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Name",
+                    Description = "Description",
+                    Url = "Url"
+                });
+            }
+            return projects;
         }
 
         private class ProjectEqualityComparer : IEqualityComparer<Project>

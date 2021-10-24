@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using VssFacade.Clients.Release;
 using VssFacade.Clients.Release.Implementations;
-using VssFacadeTests.Projects.Helpers;
 using Xunit;
 
 namespace VssFacadeTests.Releases
