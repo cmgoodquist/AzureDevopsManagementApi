@@ -1,10 +1,6 @@
-﻿using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi;
-using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.Clients;
-using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.Contracts;
-using System;
+﻿using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.Clients;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace VssFacade.Clients.Release.Implementations

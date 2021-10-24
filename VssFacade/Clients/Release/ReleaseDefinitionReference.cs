@@ -1,7 +1,4 @@
 ﻿using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace VssFacade.Clients.Release
 {

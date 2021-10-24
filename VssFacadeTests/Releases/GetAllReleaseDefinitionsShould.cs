@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using VssFacade.Clients.Release;
 using VssFacade.Clients.Release.Implementations;
@@ -35,7 +34,7 @@ namespace VssFacadeTests.Releases
         private List<ReleaseDefinition> SetUpReleaseDefinitions()
         {
             var definitions = new List<ReleaseDefinition>();
-            for(var i = 0; i < 3; i++)
+            for (var i = 0; i < 3; i++)
             {
                 definitions.Add(new ReleaseDefinition()
                 {

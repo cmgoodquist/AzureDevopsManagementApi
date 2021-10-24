@@ -29,7 +29,7 @@ namespace VssFacadeTests
 
                 return projectMock.Object as T;
             }
-            else if(typeof(T) == typeof(ReleaseHttpClient) && !(ReleaseDefinitions is null))
+            else if (typeof(T) == typeof(ReleaseHttpClient) && !(ReleaseDefinitions is null))
             {
                 var releaseDefinitionsMock = new Mock<ReleaseHttpClient>(new Uri("https://something"), new VssCredentials());
                 releaseDefinitionsMock

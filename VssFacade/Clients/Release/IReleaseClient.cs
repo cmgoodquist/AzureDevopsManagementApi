@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace VssFacade.Clients.Release
